@@ -14,7 +14,7 @@ COPY requirements.txt requirements.txt
 
 COPY . .
 RUN pip install /home/demo/
-COPY config /home/demo/.kube/config
+#COPY config /home/demo/.kube/config
 
 ENV FLASK_APP app.py
 COPY config .kube/config
