@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: to-service
+  namespace: demo
+  labels:
+    app: to-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: to-service
+  template:
+    metadata:
+      labels:
+        app: to-service
+    spec:
+      containers:
+      - name: to-service
+        image: to-service:dev
