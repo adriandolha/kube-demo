@@ -1,0 +1,44 @@
+---
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  annotations:
+    getambassador.io/resource-changed: 'true'
+  name: kibana
+  namespace: default
+spec:
+  prefix: /kbn/
+  service: 'Kibana-kibana.default.svc.cluster.local:5601'
+---
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  annotations:
+    getambassador.io/resource-changed: 'true'
+  name: elasticsearch
+  namespace: default
+spec:
+  prefix: /elasticsearch/
+  service: 'elasticsearch-master.default.svc.cluster.local:9200'
+---
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  annotations:
+    getambassador.io/resource-changed: 'true'
+  name: grafana
+  namespace: default
+spec:
+  prefix: /grafana/
+  service: grafana.monitoring.svc.cluster.local
+---
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  annotations:
+    getambassador.io/resource-changed: 'true'
+  name: pandemic-support
+  namespace: ambassador
+spec:
+  prefix: /pandemic-support/
+  service: pandemic-support.demo.svc.cluster.local

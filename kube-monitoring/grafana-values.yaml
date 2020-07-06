@@ -1,0 +1,8 @@
+namespaceOverride: "monitoring"
+labels:
+  app: grafana
+podLabels:
+  app: grafana
+grafana.ini:
+  server:
+    root_url: https://afd5f0664acd240b58332fc071456250-1ff6d404d0ca84d4.elb.eu-central-1.amazonaws.com/grafana # this host can be localhost

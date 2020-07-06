@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kube-dns
+  namespace: kube-system
+data:
+  upstreamNameservers: |
+     ["192.168.0.1"]
+#    Endava:["192.168.115.7"]
+#    Local VM:["127.0.0.53"]
