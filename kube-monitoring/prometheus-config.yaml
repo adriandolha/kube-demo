@@ -19,15 +19,15 @@ data:
     # default named port `https`. This works for single API server deployments as
     # well as HA API server deployments.
     scrape_configs:
-    - job_name: symptoms
+    - job_name: loremipsum
       static_configs:
-        - targets: ['covid19-prometheus.demo.svc.cluster.local:9090']
+        - targets: ['lorem-ipsum-prometheus.demo.svc.cluster.local:9090']
       scrape_interval: 5s
       scrape_timeout: 4s
 
-    - job_name: symptomsgu
+    - job_name: loremipsumgu
       static_configs:
-        - targets: ['covid19-statsd.demo.svc.cluster.local:9102']
+        - targets: ['lorem-ipsum-statsd.demo.svc.cluster.local:9102']
       scrape_interval: 5s
       scrape_timeout: 4s
 
